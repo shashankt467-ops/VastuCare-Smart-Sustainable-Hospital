@@ -1,0 +1,27 @@
+{
+    "total_rows": 11566,
+    "missing_values": {},
+    "invalid_rows": 0,
+    "valid_rows": 11566,
+    "duplicates": 0,
+    "outlier_flags": {
+        "rainfall_mm_assumption": 82,
+        "site_area_sqm": 42,
+        "built_area_per_floor": 124,
+        "built_area_sqm": 502,
+        "courtyard_area_sqm": 307,
+        "green_area_sqm": 443,
+        "solar_area_sqm": 160,
+        "roof_area_sqm": 124,
+        "ward_area_sqm": 14,
+        "icu_area_sqm": 115,
+        "ot_area_sqm": 129,
+        "opd_area_sqm": 9,
+        "emergency_area_sqm": 175,
+        "total_dept_area": 87,
+        "energy_demand_kwh_day": 287,
+        "peak_energy_kwh": 328,
+        "water_demand_liters_day": 176,
+        "rainwater_harvest_liters_day": 792
+    }
+}

@@ -1,0 +1,209 @@
+{
+  "model_name": "layout_quality",
+  "model_type": "HistGradientBoosting",
+  "model_version": "1.0",
+  "training_date": "2026-08-12T14:24:41.858061+00:00",
+  "dataset_version": "synthetic-v1",
+  "data_source": "synthetic_simulation",
+  "feature_count": 20,
+  "feature_names": [
+    "site_area_sqm",
+    "built_area_sqm",
+    "open_space_percent",
+    "floors",
+    "bed_capacity",
+    "dept_count",
+    "has_emergency",
+    "has_icu",
+    "has_ot",
+    "has_opd",
+    "has_pharmacy",
+    "has_courtyard",
+    "courtyard_area_sqm",
+    "north_angle",
+    "avg_window_ratio",
+    "adjacency_score",
+    "solar_potential",
+    "daylight_potential",
+    "ventilation_potential",
+    "green_coverage_score"
+  ],
+  "target_names": [
+    "layout_quality_score"
+  ],
+  "training_samples": 8096,
+  "validation_samples": 1735,
+  "test_samples": 1735,
+  "random_seed": 42,
+  "cv_folds": 5,
+  "cv_mean_r2": 0.9924,
+  "cv_std_r2": 0.0003,
+  "train_mae": 0.2682,
+  "train_r2": 0.9974,
+  "test_mae": 0.4405,
+  "test_rmse": 0.5549,
+  "test_r2": 0.9928,
+  "test_mape": 0.63,
+  "baseline_mae": 0.7237,
+  "baseline_r2": 0.9816,
+  "baseline_type": "LinearRegression",
+  "feature_importance": [
+    {
+      "feature": "adjacency_score",
+      "importance": 0.2676
+    },
+    {
+      "feature": "has_courtyard",
+      "importance": 0.2504
+    },
+    {
+      "feature": "ventilation_potential",
+      "importance": 0.1195
+    },
+    {
+      "feature": "solar_potential",
+      "importance": 0.1092
+    },
+    {
+      "feature": "green_coverage_score",
+      "importance": 0.0981
+    },
+    {
+      "feature": "daylight_potential",
+      "importance": 0.074
+    },
+    {
+      "feature": "north_angle",
+      "importance": 0.0734
+    },
+    {
+      "feature": "avg_window_ratio",
+      "importance": 0.0075
+    },
+    {
+      "feature": "courtyard_area_sqm",
+      "importance": 0.0001
+    },
+    {
+      "feature": "site_area_sqm",
+      "importance": 0.0
+    },
+    {
+      "feature": "built_area_sqm",
+      "importance": 0.0
+    },
+    {
+      "feature": "open_space_percent",
+      "importance": 0.0
+    },
+    {
+      "feature": "floors",
+      "importance": 0.0
+    },
+    {
+      "feature": "bed_capacity",
+      "importance": 0.0
+    },
+    {
+      "feature": "dept_count",
+      "importance": 0.0
+    },
+    {
+      "feature": "has_emergency",
+      "importance": 0.0
+    },
+    {
+      "feature": "has_icu",
+      "importance": 0.0
+    },
+    {
+      "feature": "has_ot",
+      "importance": 0.0
+    },
+    {
+      "feature": "has_opd",
+      "importance": 0.0
+    },
+    {
+      "feature": "has_pharmacy",
+      "importance": 0.0
+    }
+  ],
+  "model_comparison": {
+    "LinearRegression": {
+      "train": {
+        "mae": 0.7343,
+        "rmse": 0.9058,
+        "r2": 0.9808,
+        "mape": 1.04
+      },
+      "validation": {
+        "mae": 0.7237,
+        "rmse": 0.8965,
+        "r2": 0.9816,
+        "mape": 1.03
+      },
+      "training_time_seconds": 0.02
+    },
+    "RandomForest": {
+      "train": {
+        "mae": 0.3353,
+        "rmse": 0.4233,
+        "r2": 0.9958,
+        "mape": 0.48
+      },
+      "validation": {
+        "mae": 0.9134,
+        "rmse": 1.1487,
+        "r2": 0.9698,
+        "mape": 1.31
+      },
+      "training_time_seconds": 6.38
+    },
+    "GradientBoosting": {
+      "train": {
+        "mae": 0.3765,
+        "rmse": 0.4692,
+        "r2": 0.9948,
+        "mape": 0.54
+      },
+      "validation": {
+        "mae": 0.4492,
+        "rmse": 0.5611,
+        "r2": 0.9928,
+        "mape": 0.64
+      },
+      "training_time_seconds": 9.26
+    },
+    "ExtraTrees": {
+      "train": {
+        "mae": 0.0,
+        "rmse": 0.0,
+        "r2": 1.0,
+        "mape": 0.0
+      },
+      "validation": {
+        "mae": 0.8931,
+        "rmse": 1.1134,
+        "r2": 0.9716,
+        "mape": 1.28
+      },
+      "training_time_seconds": 3.74
+    },
+    "HistGradientBoosting": {
+      "train": {
+        "mae": 0.2682,
+        "rmse": 0.3344,
+        "r2": 0.9974,
+        "mape": 0.38
+      },
+      "validation": {
+        "mae": 0.4476,
+        "rmse": 0.5556,
+        "r2": 0.9929,
+        "mape": 0.64
+      },
+      "training_time_seconds": 2.63
+    }
+  }
+}

@@ -1,0 +1,366 @@
+{
+  "report_type": "ML Training Summary",
+  "generated_at": "2026-08-12T14:24:41.928915+00:00",
+  "dataset": {
+    "path": "C:\\Users\\pc\\Desktop\\Smart Sustainable Hospital\\ml\\data\\synthetic\\hospital_designs_v1.csv",
+    "total_samples": 11566,
+    "source": "synthetic_simulation",
+    "version": "v1",
+    "seed": 42
+  },
+  "models": {
+    "environmental": {
+      "best_model": "HistGradientBoosting",
+      "test": {
+        "mae": 1.2222,
+        "rmse": 1.4955,
+        "r2": 0.9799,
+        "mape": 1.75
+      },
+      "cv_mean_r2": 0.9784,
+      "cv_std_r2": 0.0004,
+      "comparison": {
+        "LinearRegression": {
+          "train": {
+            "mae": 2.6594,
+            "rmse": 3.5316,
+            "r2": 0.8894,
+            "mape": 3.65
+          },
+          "validation": {
+            "mae": 2.735,
+            "rmse": 3.617,
+            "r2": 0.8861,
+            "mape": 3.78
+          },
+          "training_time_seconds": 0.03
+        },
+        "RandomForest": {
+          "train": {
+            "mae": 0.5035,
+            "rmse": 0.6283,
+            "r2": 0.9959,
+            "mape": 0.71
+          },
+          "validation": {
+            "mae": 1.363,
+            "rmse": 1.6886,
+            "r2": 0.9712,
+            "mape": 1.94
+          },
+          "training_time_seconds": 30.02
+        },
+        "GradientBoosting": {
+          "train": {
+            "mae": 1.1497,
+            "rmse": 1.391,
+            "r2": 0.9809,
+            "mape": 1.64
+          },
+          "validation": {
+            "mae": 1.2861,
+            "rmse": 1.5648,
+            "r2": 0.9756,
+            "mape": 1.84
+          },
+          "training_time_seconds": 47.15
+        },
+        "ExtraTrees": {
+          "train": {
+            "mae": 0.0,
+            "rmse": 0.0,
+            "r2": 1.0,
+            "mape": 0.0
+          },
+          "validation": {
+            "mae": 1.4452,
+            "rmse": 1.8286,
+            "r2": 0.9676,
+            "mape": 2.05
+          },
+          "training_time_seconds": 19.86
+        },
+        "HistGradientBoosting": {
+          "train": {
+            "mae": 0.7644,
+            "rmse": 0.9486,
+            "r2": 0.9919,
+            "mape": 1.09
+          },
+          "validation": {
+            "mae": 1.2315,
+            "rmse": 1.5182,
+            "r2": 0.9789,
+            "mape": 1.77
+          },
+          "training_time_seconds": 10.96
+        }
+      }
+    },
+    "energy": {
+      "best_model": "HistGradientBoosting",
+      "test": {
+        "mae": 98.0419,
+        "rmse": 183.0174,
+        "r2": 0.9658,
+        "mape": 20.78
+      },
+      "cv_mean_r2": 0.9636,
+      "cv_std_r2": 0.0009,
+      "comparison": {
+        "LinearRegression": {
+          "train": {
+            "mae": 289.449,
+            "rmse": 505.5267,
+            "r2": 0.842,
+            "mape": 102.92
+          },
+          "validation": {
+            "mae": 282.3022,
+            "rmse": 492.2381,
+            "r2": 0.8411,
+            "mape": 104.45
+          },
+          "training_time_seconds": 0.01
+        },
+        "RandomForest": {
+          "train": {
+            "mae": 53.9145,
+            "rmse": 106.0504,
+            "r2": 0.9914,
+            "mape": 8.52
+          },
+          "validation": {
+            "mae": 151.0682,
+            "rmse": 294.7856,
+            "r2": 0.9311,
+            "mape": 23.85
+          },
+          "training_time_seconds": 9.73
+        },
+        "GradientBoosting": {
+          "train": {
+            "mae": 109.3761,
+            "rmse": 183.8351,
+            "r2": 0.9696,
+            "mape": 34.6
+          },
+          "validation": {
+            "mae": 127.8101,
+            "rmse": 233.1374,
+            "r2": 0.9518,
+            "mape": 39.92
+          },
+          "training_time_seconds": 12.52
+        },
+        "ExtraTrees": {
+          "train": {
+            "mae": 0.0,
+            "rmse": 0.0,
+            "r2": 1.0,
+            "mape": 0.0
+          },
+          "validation": {
+            "mae": 150.8162,
+            "rmse": 292.7705,
+            "r2": 0.9299,
+            "mape": 23.29
+          },
+          "training_time_seconds": 4.94
+        },
+        "HistGradientBoosting": {
+          "train": {
+            "mae": 56.9368,
+            "rmse": 95.8239,
+            "r2": 0.9904,
+            "mape": 15.26
+          },
+          "validation": {
+            "mae": 97.0114,
+            "rmse": 179.9779,
+            "r2": 0.9641,
+            "mape": 22.05
+          },
+          "training_time_seconds": 2.14
+        }
+      }
+    },
+    "water": {
+      "best_model": "HistGradientBoosting",
+      "test": {
+        "mae": 854.7006,
+        "rmse": 1611.5045,
+        "r2": 0.998,
+        "mape": 3.23
+      },
+      "cv_mean_r2": 0.9976,
+      "cv_std_r2": 0.0003,
+      "comparison": {
+        "LinearRegression": {
+          "train": {
+            "mae": 7583.5535,
+            "rmse": 11181.6919,
+            "r2": 0.7992,
+            "mape": 42.79
+          },
+          "validation": {
+            "mae": 7437.2275,
+            "rmse": 10773.5079,
+            "r2": 0.7889,
+            "mape": 43.08
+          },
+          "training_time_seconds": 0.01
+        },
+        "RandomForest": {
+          "train": {
+            "mae": 370.3844,
+            "rmse": 775.9544,
+            "r2": 0.9996,
+            "mape": 1.12
+          },
+          "validation": {
+            "mae": 956.1535,
+            "rmse": 1980.9472,
+            "r2": 0.9973,
+            "mape": 3.01
+          },
+          "training_time_seconds": 5.76
+        },
+        "GradientBoosting": {
+          "train": {
+            "mae": 936.3421,
+            "rmse": 1505.9817,
+            "r2": 0.9977,
+            "mape": 5.99
+          },
+          "validation": {
+            "mae": 1021.6717,
+            "rmse": 1623.6391,
+            "r2": 0.9965,
+            "mape": 6.91
+          },
+          "training_time_seconds": 8.81
+        },
+        "ExtraTrees": {
+          "train": {
+            "mae": 0.0,
+            "rmse": 0.0,
+            "r2": 1.0,
+            "mape": 0.0
+          },
+          "validation": {
+            "mae": 1291.7668,
+            "rmse": 2721.724,
+            "r2": 0.9963,
+            "mape": 3.42
+          },
+          "training_time_seconds": 3.44
+        },
+        "HistGradientBoosting": {
+          "train": {
+            "mae": 535.1032,
+            "rmse": 942.2645,
+            "r2": 0.9994,
+            "mape": 2.4
+          },
+          "validation": {
+            "mae": 798.3514,
+            "rmse": 1499.8194,
+            "r2": 0.998,
+            "mape": 3.24
+          },
+          "training_time_seconds": 2.32
+        }
+      }
+    },
+    "layout_quality": {
+      "best_model": "HistGradientBoosting",
+      "test": {
+        "mae": 0.4405,
+        "rmse": 0.5549,
+        "r2": 0.9928,
+        "mape": 0.63
+      },
+      "cv_mean_r2": 0.9924,
+      "cv_std_r2": 0.0003,
+      "comparison": {
+        "LinearRegression": {
+          "train": {
+            "mae": 0.7343,
+            "rmse": 0.9058,
+            "r2": 0.9808,
+            "mape": 1.04
+          },
+          "validation": {
+            "mae": 0.7237,
+            "rmse": 0.8965,
+            "r2": 0.9816,
+            "mape": 1.03
+          },
+          "training_time_seconds": 0.02
+        },
+        "RandomForest": {
+          "train": {
+            "mae": 0.3353,
+            "rmse": 0.4233,
+            "r2": 0.9958,
+            "mape": 0.48
+          },
+          "validation": {
+            "mae": 0.9134,
+            "rmse": 1.1487,
+            "r2": 0.9698,
+            "mape": 1.31
+          },
+          "training_time_seconds": 6.38
+        },
+        "GradientBoosting": {
+          "train": {
+            "mae": 0.3765,
+            "rmse": 0.4692,
+            "r2": 0.9948,
+            "mape": 0.54
+          },
+          "validation": {
+            "mae": 0.4492,
+            "rmse": 0.5611,
+            "r2": 0.9928,
+            "mape": 0.64
+          },
+          "training_time_seconds": 9.26
+        },
+        "ExtraTrees": {
+          "train": {
+            "mae": 0.0,
+            "rmse": 0.0,
+            "r2": 1.0,
+            "mape": 0.0
+          },
+          "validation": {
+            "mae": 0.8931,
+            "rmse": 1.1134,
+            "r2": 0.9716,
+            "mape": 1.28
+          },
+          "training_time_seconds": 3.74
+        },
+        "HistGradientBoosting": {
+          "train": {
+            "mae": 0.2682,
+            "rmse": 0.3344,
+            "r2": 0.9974,
+            "mape": 0.38
+          },
+          "validation": {
+            "mae": 0.4476,
+            "rmse": 0.5556,
+            "r2": 0.9929,
+            "mape": 0.64
+          },
+          "training_time_seconds": 2.63
+        }
+      }
+    }
+  },
+  "data_leakage_note": "Targets are generated by deterministic formulas from the same inputs. The ML model is learning the simulator's relationships, NOT independently validated against real hospital data. High R\u00b2 values reflect accurate learning of the simulator."
+}

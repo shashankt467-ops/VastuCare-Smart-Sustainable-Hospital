@@ -1,0 +1,216 @@
+{
+  "model_name": "environmental",
+  "model_type": "HistGradientBoosting",
+  "model_version": "1.0",
+  "training_date": "2026-08-12T14:22:37.683307+00:00",
+  "dataset_version": "synthetic-v1",
+  "data_source": "synthetic_simulation",
+  "feature_count": 23,
+  "feature_names": [
+    "site_length_m",
+    "site_width_m",
+    "site_area_sqm",
+    "north_angle",
+    "latitude",
+    "longitude",
+    "floors",
+    "bed_capacity",
+    "dept_count",
+    "has_solar",
+    "has_rainwater",
+    "has_courtyard",
+    "has_green_roof",
+    "built_area_sqm",
+    "open_space_percent",
+    "courtyard_area_sqm",
+    "green_area_sqm",
+    "solar_area_sqm",
+    "roof_area_sqm",
+    "avg_window_ratio",
+    "occupancy_percent",
+    "rainfall_mm_assumption",
+    "avg_temp_assumption"
+  ],
+  "target_names": [
+    "solar_potential",
+    "daylight_potential",
+    "ventilation_potential",
+    "rainwater_potential",
+    "sustainability_score"
+  ],
+  "training_samples": 8096,
+  "validation_samples": 1735,
+  "test_samples": 1735,
+  "random_seed": 42,
+  "cv_folds": 5,
+  "cv_mean_r2": 0.9784,
+  "cv_std_r2": 0.0004,
+  "train_mae": 0.7644,
+  "train_r2": 0.9919,
+  "test_mae": 1.2222,
+  "test_rmse": 1.4955,
+  "test_r2": 0.9799,
+  "test_mape": 1.75,
+  "baseline_mae": 2.735,
+  "baseline_r2": 0.8861,
+  "baseline_type": "LinearRegression",
+  "feature_importance": [
+    {
+      "feature": "has_courtyard",
+      "importance": 0.2603
+    },
+    {
+      "feature": "has_rainwater",
+      "importance": 0.1846
+    },
+    {
+      "feature": "rainfall_mm_assumption",
+      "importance": 0.1207
+    },
+    {
+      "feature": "avg_temp_assumption",
+      "importance": 0.0824
+    },
+    {
+      "feature": "has_solar",
+      "importance": 0.0734
+    },
+    {
+      "feature": "solar_area_sqm",
+      "importance": 0.0628
+    },
+    {
+      "feature": "avg_window_ratio",
+      "importance": 0.0577
+    },
+    {
+      "feature": "bed_capacity",
+      "importance": 0.0434
+    },
+    {
+      "feature": "has_green_roof",
+      "importance": 0.0257
+    },
+    {
+      "feature": "north_angle",
+      "importance": 0.0226
+    },
+    {
+      "feature": "roof_area_sqm",
+      "importance": 0.0206
+    },
+    {
+      "feature": "floors",
+      "importance": 0.0192
+    },
+    {
+      "feature": "open_space_percent",
+      "importance": 0.009
+    },
+    {
+      "feature": "courtyard_area_sqm",
+      "importance": 0.0063
+    },
+    {
+      "feature": "green_area_sqm",
+      "importance": 0.0061
+    },
+    {
+      "feature": "occupancy_percent",
+      "importance": 0.004
+    },
+    {
+      "feature": "site_area_sqm",
+      "importance": 0.0006
+    },
+    {
+      "feature": "built_area_sqm",
+      "importance": 0.0004
+    },
+    {
+      "feature": "site_width_m",
+      "importance": 0.0001
+    },
+    {
+      "feature": "dept_count",
+      "importance": 0.0001
+    }
+  ],
+  "model_comparison": {
+    "LinearRegression": {
+      "train": {
+        "mae": 2.6594,
+        "rmse": 3.5316,
+        "r2": 0.8894,
+        "mape": 3.65
+      },
+      "validation": {
+        "mae": 2.735,
+        "rmse": 3.617,
+        "r2": 0.8861,
+        "mape": 3.78
+      },
+      "training_time_seconds": 0.03
+    },
+    "RandomForest": {
+      "train": {
+        "mae": 0.5035,
+        "rmse": 0.6283,
+        "r2": 0.9959,
+        "mape": 0.71
+      },
+      "validation": {
+        "mae": 1.363,
+        "rmse": 1.6886,
+        "r2": 0.9712,
+        "mape": 1.94
+      },
+      "training_time_seconds": 30.02
+    },
+    "GradientBoosting": {
+      "train": {
+        "mae": 1.1497,
+        "rmse": 1.391,
+        "r2": 0.9809,
+        "mape": 1.64
+      },
+      "validation": {
+        "mae": 1.2861,
+        "rmse": 1.5648,
+        "r2": 0.9756,
+        "mape": 1.84
+      },
+      "training_time_seconds": 47.15
+    },
+    "ExtraTrees": {
+      "train": {
+        "mae": 0.0,
+        "rmse": 0.0,
+        "r2": 1.0,
+        "mape": 0.0
+      },
+      "validation": {
+        "mae": 1.4452,
+        "rmse": 1.8286,
+        "r2": 0.9676,
+        "mape": 2.05
+      },
+      "training_time_seconds": 19.86
+    },
+    "HistGradientBoosting": {
+      "train": {
+        "mae": 0.7644,
+        "rmse": 0.9486,
+        "r2": 0.9919,
+        "mape": 1.09
+      },
+      "validation": {
+        "mae": 1.2315,
+        "rmse": 1.5182,
+        "r2": 0.9789,
+        "mape": 1.77
+      },
+      "training_time_seconds": 10.96
+    }
+  }
+}

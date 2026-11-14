@@ -1,0 +1,190 @@
+{
+  "model_name": "energy",
+  "model_type": "HistGradientBoosting",
+  "model_version": "1.0",
+  "training_date": "2026-08-12T14:23:22.772918+00:00",
+  "dataset_version": "synthetic-v1",
+  "data_source": "synthetic_simulation",
+  "feature_count": 16,
+  "feature_names": [
+    "bed_capacity",
+    "built_area_sqm",
+    "occupancy_percent",
+    "floors",
+    "icu_area_sqm",
+    "ot_area_sqm",
+    "emergency_area_sqm",
+    "opd_area_sqm",
+    "ward_area_sqm",
+    "has_lab",
+    "has_solar",
+    "solar_area_sqm",
+    "avg_temp_assumption",
+    "dept_count",
+    "avg_window_ratio",
+    "daylight_potential"
+  ],
+  "target_names": [
+    "energy_demand_kwh_day",
+    "peak_energy_kwh"
+  ],
+  "training_samples": 8096,
+  "validation_samples": 1735,
+  "test_samples": 1735,
+  "random_seed": 42,
+  "cv_folds": 5,
+  "cv_mean_r2": 0.9636,
+  "cv_std_r2": 0.0009,
+  "train_mae": 56.9368,
+  "train_r2": 0.9904,
+  "test_mae": 98.0419,
+  "test_rmse": 183.0174,
+  "test_r2": 0.9658,
+  "test_mape": 20.78,
+  "baseline_mae": 282.3022,
+  "baseline_r2": 0.8411,
+  "baseline_type": "LinearRegression",
+  "feature_importance": [
+    {
+      "feature": "bed_capacity",
+      "importance": 0.5062
+    },
+    {
+      "feature": "occupancy_percent",
+      "importance": 0.1687
+    },
+    {
+      "feature": "built_area_sqm",
+      "importance": 0.1
+    },
+    {
+      "feature": "solar_area_sqm",
+      "importance": 0.0756
+    },
+    {
+      "feature": "has_lab",
+      "importance": 0.0638
+    },
+    {
+      "feature": "has_solar",
+      "importance": 0.0364
+    },
+    {
+      "feature": "avg_temp_assumption",
+      "importance": 0.0328
+    },
+    {
+      "feature": "floors",
+      "importance": 0.0102
+    },
+    {
+      "feature": "ward_area_sqm",
+      "importance": 0.0052
+    },
+    {
+      "feature": "icu_area_sqm",
+      "importance": 0.0004
+    },
+    {
+      "feature": "ot_area_sqm",
+      "importance": 0.0001
+    },
+    {
+      "feature": "emergency_area_sqm",
+      "importance": 0.0001
+    },
+    {
+      "feature": "opd_area_sqm",
+      "importance": 0.0001
+    },
+    {
+      "feature": "dept_count",
+      "importance": 0.0001
+    },
+    {
+      "feature": "daylight_potential",
+      "importance": 0.0001
+    },
+    {
+      "feature": "avg_window_ratio",
+      "importance": 0.0
+    }
+  ],
+  "model_comparison": {
+    "LinearRegression": {
+      "train": {
+        "mae": 289.449,
+        "rmse": 505.5267,
+        "r2": 0.842,
+        "mape": 102.92
+      },
+      "validation": {
+        "mae": 282.3022,
+        "rmse": 492.2381,
+        "r2": 0.8411,
+        "mape": 104.45
+      },
+      "training_time_seconds": 0.01
+    },
+    "RandomForest": {
+      "train": {
+        "mae": 53.9145,
+        "rmse": 106.0504,
+        "r2": 0.9914,
+        "mape": 8.52
+      },
+      "validation": {
+        "mae": 151.0682,
+        "rmse": 294.7856,
+        "r2": 0.9311,
+        "mape": 23.85
+      },
+      "training_time_seconds": 9.73
+    },
+    "GradientBoosting": {
+      "train": {
+        "mae": 109.3761,
+        "rmse": 183.8351,
+        "r2": 0.9696,
+        "mape": 34.6
+      },
+      "validation": {
+        "mae": 127.8101,
+        "rmse": 233.1374,
+        "r2": 0.9518,
+        "mape": 39.92
+      },
+      "training_time_seconds": 12.52
+    },
+    "ExtraTrees": {
+      "train": {
+        "mae": 0.0,
+        "rmse": 0.0,
+        "r2": 1.0,
+        "mape": 0.0
+      },
+      "validation": {
+        "mae": 150.8162,
+        "rmse": 292.7705,
+        "r2": 0.9299,
+        "mape": 23.29
+      },
+      "training_time_seconds": 4.94
+    },
+    "HistGradientBoosting": {
+      "train": {
+        "mae": 56.9368,
+        "rmse": 95.8239,
+        "r2": 0.9904,
+        "mape": 15.26
+      },
+      "validation": {
+        "mae": 97.0114,
+        "rmse": 179.9779,
+        "r2": 0.9641,
+        "mape": 22.05
+      },
+      "training_time_seconds": 2.14
+    }
+  }
+}
